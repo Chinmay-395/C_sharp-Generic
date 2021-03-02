@@ -10,9 +10,10 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            List<int> ages = new List<int>();
-            ages.Add(23);
-
+            //List<int> ages = new List<int>();
+            //ages.Add(23);
+            Console.ReadLine();
+            DemonstrateTextFileStorage();
             
             Console.WriteLine();
             Console.Write("Press enter to shut down...");
@@ -23,12 +24,13 @@ namespace ConsoleUI
         {
             List<Person> people = new List<Person>();
             List<LogEntry> logs = new List<LogEntry>();
+
             string peopleFile = @"C:\Temp\people.csv";
             string logFile = @"C:\Temp\logs.csv";
 
             PopulateLists(people, logs);
 
-            OriginalTextFileProcessor.SavePeople(people, peopleFile);
+            //OriginalTextFileProcessor.SavePeople(people, peopleFile);
 
             var newPeople = OriginalTextFileProcessor.LoadPeople(peopleFile);
 
